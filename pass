@@ -1,0 +1,46 @@
+def Pass():
+    us1 = input('Pleas enter username :')
+    pas1 = input('pleas enter password :')
+    us = 'a'
+    pas = 'a'
+    x = 0
+    while us != us1 and x < 2:
+        us1 = input('Pleas enter username again :')
+        x += 1
+    c = 0
+    while pas != pas1 and c < 2:
+        pas1 = input('pleas enter password again :')
+        c += 1
+    if pas == pas1 and us == us1:
+        print('WOLCOM SIR :) ')
+        sname = input("Enter the name:")
+        sage = input("Enter the age:")
+        snum = input("Enter the number:")
+        x = 1
+        while x <= 1000:
+
+            print("Pleas enter the number from 1 to 2 because information  ")
+            print('number 1 : for information')
+            print("number 2 : for save ")
+            print('*' * 60)
+            op = input('Enter number  from lest :')
+            if op == '1':
+                sta_info(sname, sage, snum)
+            elif op == '2':
+                print("Dane the save , thank you")
+                break
+            else:
+                print('Error')
+            x += 1
+            print('*' * 60)
+    else:
+        print('"Error in username or password "')
+
+def sta_info(sname,sage,snum):
+        print('The name is   :', sname)
+        print('The age is    :', sage)
+        print('The number is :', snum)
+
+
+
+Pass()
